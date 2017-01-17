@@ -1,6 +1,6 @@
 ---
 layout: home
-main_image: /uploads/header-image.jpg
+main_image: /uploads/background.jpg
 ---
 {% assign settings = settings.data.settings %}
 <nav id="menu">
@@ -11,26 +11,23 @@ main_image: /uploads/header-image.jpg
   <div class="header color-overlay" {% if page.main_image %} style=" background: url({{ page.main_image }}) no-repeat center center; background-size: cover;"
 {% else %}style=" background: url({{settings.main_image}}) no-repeat center center; background-size: cover;" {% endif %}>
 <div class="top">
-  <ul class="socialbar">
-    <li><a href="tel:{{settings.phone }}"><i class="fa fa-phone"></i></a></li>
-    <li><a href="mailto: {{settings.church_email}}"><i class="fa fa-envelope"></i></a></li>
-    <li><a href="{{settings.facebook}}"><i class="fa fa-facebook"></i></a></li>
-  </ul>
-  <a href="#" class="toggle-button"><span class="fa-stack fa-lg">
-  <i class="fa fa-circle fa-stack-2x"></i>
-  <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-</span></a> 
+  <a href="#" class="logo"><img src="{{settings.church_logo_image_path}}" alt=""></a>
+  <div class="rightmenu">
+  <a href="" class="button">PLAN A VISIT</a>
+  <a href="#" class="toggle-button">MENU</i></a>
+  </div><!--/right-menu--> 
   </div><!--/top-->
-  <img src="{{site.data.settings.church_logo_image_path}}" alt="" />
-  <h1 class="editable">A small church with a big heart</h1>
-  <p class="editable">If you live in the Robinson, IL area you can find a church home where you are loved and can grow in the faith. At New Hebron Baptist Church we love Jesus, love the Bible and love people.</p>
-  <a href="#visit" class="cta button large">Plan A Visit</a>
+  <div class="main-heading">
+  <h3 class="editable">Academy Street Baptist Church</h3>
+  <h1 class="editable">A church home for Randleman families.</h1>
+  <a href="#visit" class="cta button">Plan A Visit</a>
   <ul class="menu">
   {% if site.data.events[0].Event_Title %}
     <li><a href="#"><i class="fa fa-calendar"></i> View Upcoming Events</a></li>{% endif %}
     <li><a href="#pastor"><i class="fa fa-user"></i> Meet Our Pastor</a></li>
     <li><a href="#contact"><i class="fa fa-envelope"></i> Get In Touch</a></li>
   </ul>
+  </div><!--/main-heading-->
 </div><!--/header-->
 <div class="intro">
   <h2 class="editable">What if you could find....</h2>
