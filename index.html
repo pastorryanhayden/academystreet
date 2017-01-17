@@ -1,6 +1,7 @@
 ---
 layout: home
 main_image: /uploads/background.jpg
+what_if_image: /uploads/what-if.jpg
 ---
 {% assign settings = settings.data.settings %}
 <nav id="menu">
@@ -13,14 +14,14 @@ main_image: /uploads/background.jpg
 <div class="top">
   <a href="#" class="logo"><img src="{{settings.church_logo_image_path}}" alt=""></a>
   <div class="rightmenu">
-  <a href="" class="button">PLAN A VISIT</a>
+  <a href="#visit" class="button">PLAN A VISIT</a>
   <a href="#" class="toggle-button">MENU</i></a>
   </div><!--/right-menu--> 
   </div><!--/top-->
   <div class="main-heading">
   <h3 class="editable">Academy Street Baptist Church</h3>
   <h1 class="editable">A church home for Randleman families.</h1>
-  <a href="#visit" class="cta button">Plan A Visit</a>
+  <a href="#visit" class="cta button`">Plan A Visit</a>
   <ul class="menu">
   {% if site.data.events[0].Event_Title %}
     <li><a href="#"><i class="fa fa-calendar"></i> View Upcoming Events</a></li>{% endif %}
@@ -30,39 +31,31 @@ main_image: /uploads/background.jpg
   </div><!--/main-heading-->
 </div><!--/header-->
 <div class="intro">
+  <div class="pic" style="background: url({{page.what_if_image}}) no-repeat center center; background-size: cover;">
+   </div><!--/pic-->
+  <div class="text">
   <h2 class="editable">What if you could find....</h2>
   <div class="find-sections">
   <div class="find-section editable">
-    <img src="http://sitesforchurch.s3.amazonaws.com/grace.jpg" alt="" />
+    <img src="http://sitesforchurch.s3.amazonaws.com/grace.png" alt="" />
     <h3>GRACE</h3>
     <p>Learn about what Jesus has done for you. He’s paved the way for you to have a meaningful relationship with God and an eternal home in heaven.</p>
   </div><!--/find-section-->
   <div class="find-section editable">
-    <img src="http://sitesforchurch.s3.amazonaws.com/purpose.jpg" alt="" />
+    <img src="http://sitesforchurch.s3.amazonaws.com/purpose.png" alt="" />
     <h3>PURPOSE</h3>
     <p>Live for more than toys and a paycheck. Figure out what God made you. Be a part of something with eternal consequences.</p>
   </div><!--/find-section-->
   <div class="find-section editable">
-    <img src="http://sitesforchurch.s3.amazonaws.com/community.jpg" alt="" />
+    <img src="http://sitesforchurch.s3.amazonaws.com/community.png" alt="" />
     <h3>COMMUNITY</h3>
     <p>Don’t go it alone. Find friends who share your deepest beliefs and will help and encourage you through life.</p>
   </div><!--/find-section-->
-  <div class="find-section editable"><p><img alt="" src="http://sitesforchurch.s3.amazonaws.com/instruction.jpg" /></p><h3>INSTRUCTION</h3><p>Discover what God&rsquo;s word says. Hear it taught and explained regularly and let it nourish you and grow you in your Christian life.</p></div><!--/find-section-->
+  <div class="find-section editable"><p><img alt="" src="http://sitesforchurch.s3.amazonaws.com/instruction.png" /></p><h3>INSTRUCTION</h3><p>Discover what God&rsquo;s word says. Hear it taught and explained regularly and let it nourish you and grow you in your Christian life.</p></div><!--/find-section-->
   </div><!--/find-sections-->
+  </div><!--/text-->
 </div><!--/intro-->
-<div class="testimonials">
-  <div class="testimonials-wrapper">
-    {% for item in site.testimonials %}
-   
-  <div class="testimonial">
-    <img src="{{ item.thumbnail_image }}" alt="" />
-    {{ item.testimonial_markdown | markdownify }}
-    <p class="signature"> {{ item.person }}, {{item.hometown}}</p>
-  </div><!--/testimonial-->
-   {% endfor %}
- 
-  </div><!--/testimonials-wrapper-->
-</div><!--/testimonials-->
+{% include map.html %}
 <div class="visit">
   <h2 id="visit" class="editable">Plan A Visit</h2>
   <p class="intro-text editable">Visiting a new church can be a scary experience. We want to put you at ease by answering the most common questions people have….</p>
@@ -112,7 +105,7 @@ main_image: /uploads/background.jpg
    
     </div><!--/visit-sections-->
 </div><!--/visit-->
-{% include map.html %}
+{% include photos.html %}
 <div class="pastor">
   <h2 id="pastor" class="editable">Meet Our Pastor</h2>
   {% assign pastor = site.leaders | where: "Is_senior_pastor", true %} 
@@ -165,13 +158,7 @@ main_image: /uploads/background.jpg
   {% endfor %}
 </div><!--/events-->
 {% endif %}
-<div class="photos">
-  <div class="photos-inner" id="sqr-gallery">
-  {% for img in site.photo_gallery limit: 12 %}
-        <div class="photo"><a href="#" data-featherlight="{{img.image_path}}" style="background: url({{img.image_path }}) no-repeat center center; background-size: cover; width: 250px; height: 250px; line-height: 250px; display: block;"></a></div>
-      {% endfor %}
-  </div><!--/photos-inner-->
-</div><!--/gallery-->
+
 
 
 </main>
