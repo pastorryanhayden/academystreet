@@ -61,10 +61,10 @@
             color: $main_light_color
         ul.menu
             position: relative
-            @include menu-direction(vertical)
+            @include menu-direction(veritcal)
             text-align: left
-            // @include breakpoint(medium)
-            //     @include menu-direction(horizontal) 
+            @include breakpoint(medium)
+                @include menu-direction(horizontal) 
             li 
                 line-height: 14px
             li a 
