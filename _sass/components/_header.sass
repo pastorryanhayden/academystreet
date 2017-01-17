@@ -52,34 +52,24 @@
             font-size: 64
             max-width: 740px
             margin-bottom: 40px
-        a.cta.button
+        a.button
             border-radius: 40px
             font-size: 12px
             text-transform: uppercase
-            font-weight: bold  
-
-    p 
-        position: relative
-        width: 80%
-        @include breakpoint(medium)
-            width: 60%
-        text-align: left
-        font-size: 18px
-    h3 
-        position: relative
-        margin-top: 30px
-        margin-bottom: 30px
-    ul.menu
-        position: relative
-        @include menu-direction(vertical)
-        text-align: left
-        // @include breakpoint(medium)
-        //     @include menu-direction(horizontal) 
-        li 
-            line-height: 14px
-        li a 
-            font-size: 14px
-            line-height: 14px
-            padding-bottom: 0
+            font-weight: bold 
+            background-color: $main_bright_color
+            color: $main_light_color
+        ul.menu
+            position: relative
+            @include menu-direction(vertical)
+            text-align: left
+            // @include breakpoint(medium)
+            //     @include menu-direction(horizontal) 
+            li 
+                line-height: 14px
+            li a 
+                font-size: 14px
+                line-height: 14px
+                padding-bottom: 0
 
      
