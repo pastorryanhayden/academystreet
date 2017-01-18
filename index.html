@@ -11,16 +11,11 @@ what_if_image: /uploads/what-if.jpg
 <main id="panel">
   <div class="header color-overlay" {% if page.main_image %} style=" background: url({{ page.main_image }}) no-repeat center center; background-size: cover;"
 {% else %}style=" background: url({{settings.main_image}}) no-repeat center center; background-size: cover;" {% endif %}>
-<div class="top">
-  <a href="#" class="logo"><img src="{{settings.church_logo_image_path}}" alt="" /></a>
-  <div class="rightmenu">
-  <a href="#visit" class="button">PLAN A VISIT</a>
-  <a href="#" class="toggle-button">MENU</a>
-  </div><!--/right-menu--> 
-  </div><!--/top-->
+{% include topmenu.html %}
   <div class="main-heading">
   <h3 class="editable">Academy Street Baptist Church</h3>
   <h1 class="editable">A church home for Randleman families.</h1>
+  <div class="cta">
   <a href="#visit" class="button">Plan A Visit</a>
   <ul class="menu">
   {% if site.data.events[0].Event_Title %}
@@ -28,6 +23,7 @@ what_if_image: /uploads/what-if.jpg
     <li><a href="#pastor"><i class="fa fa-user"></i> Meet Our Pastor</a></li>
     <li><a href="#contact"><i class="fa fa-envelope"></i> Get In Touch</a></li>
   </ul>
+  </div><!--/cta-->
   </div><!--/main-heading-->
 </div><!--/header-->
 <div class="intro">

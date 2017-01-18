@@ -4,7 +4,6 @@
     padding-top: 20px
     @include breakpoint(660px)
         height: 70vh
-        min-height: 730px
         padding-bottom: 40px
     background-size: cover
     color: $main_dark_color
@@ -53,24 +52,25 @@
             font-size: 64
             max-width: 740px
             margin-bottom: 40px
-        a.button
-            border-radius: 40px
-            font-size: 12px
-            text-transform: uppercase
-            font-weight: bold 
-            background-color: $main_bright_color
-            color: $main_light_color
-        ul.menu
+        .cta
+            display: flex
             position: relative
-            @include menu-direction(veritcal)
-            text-align: left
-            @include breakpoint(medium)
-                @include menu-direction(horizontal) 
-            li 
-                line-height: 14px
-            li a 
-                font-size: 14px
-                line-height: 14px
-                padding-bottom: 0
+            a.button
+                border-radius: 40px
+                font-size: 12px
+                text-transform: uppercase
+                font-weight: bold 
+                background-color: $main_bright_color
+                color: $main_light_color
+            ul.menu
+                position: relative
+                @include menu-direction(horizontal)
+                text-align: left
+                li 
+                    line-height: 14px
+                li a 
+                    font-size: 14px
+                    line-height: 14px
+                    padding-bottom: 0
 
      
